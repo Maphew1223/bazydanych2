@@ -14,3 +14,5 @@ measure_data.to_sql("measurements", conn, if_exists="replace", index=False)
 
 result = conn.execute("SELECT * FROM stations LIMIT 5").fetchall()
 print(result)
+
+conn.close()
